@@ -13,14 +13,87 @@ namespace ProjetoAtleta
         private double peso;
         private int idade;
 
-        public void setNome(string nome)
+        public string Nome {
+            set
+            {
+                if(value != string.Empty)
+                {
+                    this.nome = value;
+                }
+                else
+                {
+                    throw new Exception("O nome deve ser obrigatoriamente preenchido.");
+                }
+
+            }
+            get { return this.nome; }
+        }
+        public double Altura
         {
-            this.nome = nome;
+            set
+            {
+                if (value >= 1)
+                {
+                    this.altura = value;
+                }
+                else
+                {
+                    throw new Exception("A altura mínima é de 1.00m");
+                }
+
+            }
+            get { return this.altura; }
+        }
+        public double Peso
+        {
+            set
+            {
+                if (value >= 1)
+                {
+                    this.peso = value;
+                }
+                else
+                {
+                    throw new Exception("O peso mínumo é de 1Kg");
+                }
+
+            }
+            get { return this.peso; }
+        }
+        public int Idade
+        {
+            set
+            {
+                if (value >= 1)
+                {
+                    this.idade = value;
+                }
+                else
+                {
+                    throw new Exception("A idade mínima é de 1 ano");
+                }
+
+            }
+            get { return this.idade; }
+        }
+
+        /*public void setNome(string nome)
+        {
+            if (nome != string.Empty)
+            {
+                this.Nome = nome;
+            }
+            else
+            {
+                throw new Exception("O nome deve ser obrigatoriamente preenchido.");
+            }
+            
         }
         public string getNome()
         {
-            return nome;
+            return Nome;
         }
+        
         public void setAltura(double altura)
         {
             this.altura = altura;
@@ -45,5 +118,6 @@ namespace ProjetoAtleta
         {
             return idade;
         }
+        */
     }
 }
