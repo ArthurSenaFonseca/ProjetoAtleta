@@ -76,8 +76,17 @@ namespace ProjetoAtleta
             }
             get { return this.idade; }
         }
-
-        /*public void setNome(string nome)
+        public string ImprimirDados()
+        {
+            return "Dados dos Atletas: \n\n Nome: " + this.nome + "\n Altura: " + this.altura.ToString("0.00") + "m" + "\n Peso: " + this.peso + "\n Idade: " + this.idade;
+        }
+        /*public double CalcularIMC()
+        {
+            Double total;
+            total = (obj.Peso / (obj.Altura * obj.Altura));
+            string resultado = Convert.ToString(total);
+            txt_imc.Text = resultado.ToString(CultureInfo.InvariantCulture);
+        }
         {
             if (nome != string.Empty)
             {

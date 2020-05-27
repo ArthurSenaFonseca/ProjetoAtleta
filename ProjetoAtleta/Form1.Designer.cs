@@ -37,7 +37,8 @@
             this.lbl_idade = new System.Windows.Forms.Label();
             this.txt_idade = new System.Windows.Forms.TextBox();
             this.btn_calcular = new System.Windows.Forms.Button();
-            this.btn_sair = new System.Windows.Forms.Button();
+            this.btn_enviar = new System.Windows.Forms.Button();
+            this.txt_IMC = new System.Windows.Forms.TextBox();
             this.SuspendLayout();
             // 
             // lbl_nome
@@ -106,30 +107,40 @@
             // 
             // btn_calcular
             // 
-            this.btn_calcular.Location = new System.Drawing.Point(161, 25);
+            this.btn_calcular.Location = new System.Drawing.Point(161, 119);
             this.btn_calcular.Name = "btn_calcular";
             this.btn_calcular.Size = new System.Drawing.Size(133, 54);
             this.btn_calcular.TabIndex = 8;
             this.btn_calcular.Text = "Calcular IMC";
             this.btn_calcular.UseVisualStyleBackColor = true;
+            this.btn_calcular.Click += new System.EventHandler(this.btn_calcular_Click);
             // 
-            // btn_sair
+            // btn_enviar
             // 
-            this.btn_sair.BackColor = System.Drawing.Color.Red;
-            this.btn_sair.ForeColor = System.Drawing.SystemColors.ControlText;
-            this.btn_sair.Location = new System.Drawing.Point(161, 158);
-            this.btn_sair.Name = "btn_sair";
-            this.btn_sair.Size = new System.Drawing.Size(133, 50);
-            this.btn_sair.TabIndex = 9;
-            this.btn_sair.Text = "Sair";
-            this.btn_sair.UseVisualStyleBackColor = false;
+            this.btn_enviar.BackColor = System.Drawing.Color.White;
+            this.btn_enviar.ForeColor = System.Drawing.SystemColors.ControlText;
+            this.btn_enviar.Location = new System.Drawing.Point(161, 30);
+            this.btn_enviar.Name = "btn_enviar";
+            this.btn_enviar.Size = new System.Drawing.Size(133, 50);
+            this.btn_enviar.TabIndex = 9;
+            this.btn_enviar.Text = "Enviar";
+            this.btn_enviar.UseVisualStyleBackColor = false;
+            this.btn_enviar.Click += new System.EventHandler(this.btn_enviar_Click);
+            // 
+            // txt_IMC
+            // 
+            this.txt_IMC.Location = new System.Drawing.Point(161, 190);
+            this.txt_IMC.Name = "txt_IMC";
+            this.txt_IMC.Size = new System.Drawing.Size(100, 20);
+            this.txt_IMC.TabIndex = 10;
             // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(306, 220);
-            this.Controls.Add(this.btn_sair);
+            this.Controls.Add(this.txt_IMC);
+            this.Controls.Add(this.btn_enviar);
             this.Controls.Add(this.btn_calcular);
             this.Controls.Add(this.txt_idade);
             this.Controls.Add(this.lbl_idade);
@@ -157,7 +168,8 @@
         private System.Windows.Forms.Label lbl_idade;
         private System.Windows.Forms.TextBox txt_idade;
         private System.Windows.Forms.Button btn_calcular;
-        private System.Windows.Forms.Button btn_sair;
+        private System.Windows.Forms.Button btn_enviar;
+        private System.Windows.Forms.TextBox txt_IMC;
     }
 }
 
